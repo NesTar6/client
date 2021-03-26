@@ -5,23 +5,40 @@
 
 .header {
   background-color: #ECE9DE;
+  width: 100%;
 }
 
 body {
-  background-color: #F1E6C8;
+  background-color: #FFF3A5;
 }
 
 .list-items {
+  font-family: 'Indie Flower', cursive;
   margin: 0;
   display: flex;
   flex-direction: row;
-  align-items: space-evenly;
+  align-items: center;
   justify-content: space-evenly;
   box-shadow: 0 8px 6px -3px rgb(61, 61, 61);
 }
 
-.list-items li {
+.list-items li:hover {
+  font-size: 130%;
+  color: #F58212;
   list-style: none;
+}
+
+.list-items li {
+  font-size: 120%;
+  transition: all ease-in-out 356ms;
+  color: #FFB234;
+  list-style: none;
+}
+
+.title {
+  font-size: 200%;
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
 }
 
 .card-content {
@@ -31,4 +48,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.match-screen {
+  height: 70%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFDD3;
+  box-shadow: 0 8px 6px -3px rgb(61, 61, 61);
+  border-radius: 10px;
 }

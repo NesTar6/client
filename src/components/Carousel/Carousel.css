@@ -1,0 +1,14 @@
+.carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+}
+
+.card__content {
+    position: absolute;
+    padding-top: 60px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+}
