@@ -1,284 +1,63 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-body{
-  background-color: #330641;
+.header {
+  background-color: #ECE9DE;
+  width: 100%;
 }
-
-.game-list {
-  background-color: #330641;
-  grid-template-columns: repeat(6, minmax(160px, 1fr));
-  grid-template-rows: repeat(4, minmax(200px, 1fr));;
-  padding: 1rem 1rem;
-  display: grid;
-  row-gap: 1%;
-}
-/* Mobile */
-@media screen and (max-width: 600px) {
-  .game-list {
-    grid-template-columns: repeat(2, minmax(160px, 1fr));
-    grid-template-rows: repeat(4, minmax(200px, 1fr));
-  }
-}
-
-/* Tablet */
-@media screen and (min-width: 601px) and (max-width: 900px) {
-  .game-list {
-    grid-template-columns: repeat(3, minmax(160px, 1fr));
-    grid-template-rows: repeat(4, minmax(200px, 1fr));;
-  }
-}
-
-/* Normal */
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  .game-list {
-    grid-template-columns: repeat(4, minmax(160px, 1fr));
-    grid-template-rows: repeat(4, minmax(200px, 1fr));
-  }
-}
-
-/* Lg Screen */
-@media screen and (min-width: 1201px) {
-  .game-list {
-    grid-template-columns: repeat(6, minmax(160px, 1fr));
-    grid-template-rows: repeat(4, minmax(200px, 1fr));
-  }
-}
-
-
-.container {
-  font-size: 13.5px;
-  padding: 5px;
-  box-shadow: 10px 5px 5px rgb(30, 3, 61);
-  margin: auto;
-  background-color: rgb(119, 112, 121);
-  color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-  width: 175px;
-  height: 230px;
-  transition: width .5s, height .5s, font-size .356ms;
-}
-
-
 
 body {
-  background-color: #330641;
+  background-color: #FFF3A5;
 }
 
-.container:hover {
-   font-size: 13.5px;
-   box-shadow: 10px 5px 5px rgb(0, 0, 0);
-   height: 235px;
-}
-
-/* resize images */
-.container img {
-  object-fit: contain;
-  object-position: top center;
-  width: 100%;
-  height: 100%;
-}
-
-.container .info {
-  box-sizing: content-box;
-  visibility: hidden;
-  opacity: 0;
-  width: 175px;
-  height: 0;
-  line-height: 1.5;
-  text-transform: capitalize;
-  transition: all ease-in-out 356ms;
-  position: absolute;
-  color: #fff;
-  padding-bottom: 5px;
-  font-weight: 500;
-  border-top: calc(3px + .03vw) solid #330641;
-  border-bottom: calc(3px + .09vw) solid #330641;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.container:hover .info {
-  opacity: 1;
-  height: 225px;
-  visibility: visible;
-}
-
-
-
-.App-header {
-  font-family: 'Squada One', cursive;
-  position: 'relative';
-  background-color: #282c34;
-  border: 3px solid black;
-  padding: 0px 10px;
-  min-height: 30px;
+.list-items {
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(35px);
-  color: white;
+  justify-content: space-evenly;
+  box-shadow: 0 8px 6px -3px rgb(61, 61, 61);
 }
 
-.review-button {
-    border-radius:25px; 
-    background-color:#330641; 
-    color:white; 
-    height:30px; 
-    font-size:20px; 
-    position:absolute; 
-    top: 5px; 
-    right: 10px
-  }
-
-.send-button {
-    background-color: #4c0066;
-    border: none;
-    color: white;
-    padding: 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    margin: 4px 2px;
-    border-radius: 10%;
-    position: absolute;
-    bottom: 0.2rem;
-    right: 0.5rem;
+.list-items li:hover {
+  font-size: 130%;
+  color: #F58212;
+  list-style: none;
 }
 
-.content-review  {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:#4c0066; 
-    border: 5px solid black; 
-    margin-left:15%;
-    margin-right:15%;
-    margin-bottom:15px;
-    padding-top: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 5px;
-    box-shadow: 10px 5px 5px rgb(30, 3, 61);
-  }
-
-.content-detail {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color:#4c0066; 
-    border: 5px solid black; 
-    /* border-left: 0px;  */
-    margin-right: 15.0%;
-    margin-bottom: 15px;
-    top: 0px;
-    padding-top: 0px;
-    padding-left: 8px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    box-shadow: 10px 5px 5px rgb(30, 3, 61);
-  }
-
-  .cover-detail {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .img-style {
-    min-height:350px; 
-    max-height:50vh;
-    min-width:200px; 
-    max-width:35vw;
-    border: 5px solid black; 
-    border-right-width: 0px;
-    margin-bottom:15px;
-    box-shadow: 10px 5px 5px rgb(30, 3, 61);
-  }
-
-  .img-container {
-    display:flex;
-    flex-direction:row; 
-    justify-content: center; 
-    margin-left: 15%; 
-  }
-
-
-
-  .overlay {
-    position: fixed;
-    display: block; 
-    overflow: auto; 
-    width: 100%; 
-    height: 100%; 
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); 
-    z-index: 999; 
-    cursor: pointer;
-  }
-
-.content {
-        margin: 15% auto;
-        background-color: white;
-        border-radius: 0.25rem;
-        width: 50vw;
-        padding: 2rem;
-        position: relative;
-  }
-
-.platorm-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 30px;
-  row-gap: 15px;
-  color: white;
+.list-items li {
+  font-size: 120%;
+  transition: all ease-in-out 356ms;
+  color: #FFB234;
+  list-style: none;
 }
 
-.platorm-list li {
-  text-align: left;
+.title {
+  font-size: 200%;
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
 }
 
-.platorm-list li span{
-  display: block;
-}
-
-svg {
-  height: 30px;
-  cursor: pointer;
-}
-
-.carousel {
-  text-align: center;
-  padding: 20px;
-  padding-bottom: 50px;
+.card-content {
+  border: 2px solid black;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-  @media screen and (min-width: 300px) and (max-width: 1200px) {
-    .cover-detail {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .content-detail {
-      margin-left: 15%;
-      border-left: 5px solid black; 
-    }
-    .img-container {
-      margin-right: 15%;
-    }
-    .img-style {
-      border-right: 5px solid black; 
-    }
-  }
+.match-screen {
+  height: 70%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFDD3;
+  box-shadow: 0 8px 6px -3px rgb(61, 61, 61);
+  border-radius: 10px;
+}
