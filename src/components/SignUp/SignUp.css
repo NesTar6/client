@@ -1,0 +1,30 @@
+.signUpWrapper{
+    margin: 5px;
+    padding-top: 5px;
+    border: 3px solid black;
+    height: 60%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+justify-content: space-evenly;
+}
+.signUpForm{
+    width:90%;
+    color:blanchedalmond;
+    background-color:cornsilk;
+}
+.signUpButton{
+width: 90%;
+}
+.lineBreak{
+    border: none;
+    width: 85%;
+    background-color: #ff9900;
+    /* color:black; */ 
+    height: 2px;
+    content: 'OR';
+    text-align: center;
+    overflow: visible;
+
+}

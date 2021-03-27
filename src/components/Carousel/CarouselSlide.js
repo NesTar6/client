@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Hidden, makeStyles } from '@material-ui/core';
+import { Card, makeStyles } from '@material-ui/core';
 import './Carousel.css'
 
 export default function CarouselSlide(props) {
@@ -9,6 +9,7 @@ export default function CarouselSlide(props) {
         card: {
             height:'50vh',
             width: '30vw',
+            minWidth: '200px',
             maxWidth: '400px',
             // ['@media (min-width: 300px) and (max-width: 600px)']: { // eslint-disable-line no-useless-computed-key
             //     maxHeight: '350px',
@@ -26,15 +27,16 @@ export default function CarouselSlide(props) {
                 flexDirection: 'column',
                 justifyContent: 'flex-end',
                 height:'50vh',
+                minWidth: '200px',
                 width: '30vw',
                 maxWidth: '400px',
-                background: 'linear-gradient(to top, rgba(0, 0, 0, 0.30), transparent)',
+                background: 'linear-gradient(to top, rgba(0, 0, 0, 0.50), transparent)',
                 // ['@media (min-width: 300px) and (max-width: 600px)']: { // eslint-disable-line no-useless-computed-key
                 //     height: '250px',
                 //     width: '150px'
                 // },
                 //width: '100%',
-                transition: 'background ease-in-out 356ms',
+                transition: 'opacity ease-in-out 356ms',
                 borderRadius: '10px',
             },
             '& div:hover' : {
@@ -53,6 +55,7 @@ export default function CarouselSlide(props) {
                 objectPosition: 'top center',
                 overflow: 'hidden',
                 height:'50vh',
+                minWidth: '200px',
                 width: '30vw',
                 zIndex: '1',
                 maxWidth: '400px',
@@ -65,9 +68,9 @@ export default function CarouselSlide(props) {
           "&& h3" : {
             color: 'white',
             textAlign: 'center',
-            fontSize: '120%',
+            fontSize: '100%',
             width: '100%',
-            margin: '5% 0',
+            margin: '1% 0',
             textShadow: '0 2px 3px rgba(0, 0, 0, 0.3)',
             zIndex: '3',
             borderRadius: '10px',
@@ -79,11 +82,15 @@ export default function CarouselSlide(props) {
     const classes = useStyles();
 
     return (
-        <div >
+        <div className="dog_display">
+            <h3>{props.name}</h3>
             <Card className={classes.card}>
                 <img src={pic} alt="screenshot"/>
-                    <div>   
-                        <h3>{props.name}</h3>
+                    <div >   
+                        <h3>Age: {props.age}</h3>
+                        <h3>Breed: {props.breeds}</h3>
+                        <h3>Gender: {props.gender}</h3>
+                        <h3>Size: {props.size}</h3>
                     </div>   
              </Card> 
         </div>
