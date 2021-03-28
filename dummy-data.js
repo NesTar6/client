@@ -1,5 +1,4 @@
-const DOG_DATA = {
-    "animals": [
+const DOG_DATA = [
         {
             "id": 120,
             "organization_id": "NJ333",
@@ -141,8 +140,6 @@ const DOG_DATA = {
             },
             "published_at": "2018-09-04T14:49:09+0000",
             "distance": 0.4095
-        }
-    ]
-}
+        }]
 
 export default DOG_DATA
