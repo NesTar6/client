@@ -16,7 +16,6 @@ const [signingUp,setSignUp] = React.useState(false);
 let homeCard = <div className="signInButtonGroup">
 <Button className="SIButtons" variant="contained" onClick={(e) => signUpOrLogin(e, 'login')}>Log in</Button>
 <Button className="SIButtons" variant="contained" onClick={(e) => signUpOrLogin(e, 'signUp')}>Sign up</Button>
-<span className="forgotPassword">Forgot password?</span>
 </div>;
 
 const signUpOrLogin = (e, type) =>{

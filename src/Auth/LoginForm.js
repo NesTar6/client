@@ -60,9 +60,17 @@ const LoginForm = withStyles(styles) (props => {
              value={password}
              onChange={e => handleChange(e, 'password')}
              />
-             <Button className="loginButton" variant="contained"size="small" onClick={buttonClick}>
+              <Button className="loginButton" variant="contained"size="small" style={{width:'90%'}} onClick={buttonClick}>
                  Log in
-                 </Button>
+              </Button>
+
+             <div className="loginAnchors" >
+              <span className="forgotPassword">Forgot password?</span>
+              <span className="signUpAnchor"  onClick={console.log('testing sign up')}>
+                Sign up
+              </span>
+              
+            </div>
         </div>
     )
 });

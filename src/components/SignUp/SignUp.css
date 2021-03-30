@@ -2,7 +2,7 @@
     margin: 5px;
     padding-top: 5px;
     border: 3px solid black;
-    height: 60%;
+    height: 70%;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -26,5 +26,37 @@ width: 90%;
     content: 'OR';
     text-align: center;
     overflow: visible;
+
+}
+
+/* SIGN UP SWITCHES */
+
+.switchGroup {
+    border: 3px solid rgb(255, 0, 0);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.nestedGroup{
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid black;
+
+}
+.switchWrapper{
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+p{
+    border: 1px dashed white;
+    font-size: small ;
+    color: papayawhip;
+    display: flex;
+    justify-content: center;
 
 }
