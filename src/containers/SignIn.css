@@ -11,9 +11,9 @@
     /* border: 3px solid rgb(201, 0, 0); */
     background-color: #3B2826;
     /* position:fixed; */
-    height: 450px;
+    height: 500px;
     /* min-height: 400px; */
-    width: 300px;
+    width: 400px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

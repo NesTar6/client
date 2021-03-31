@@ -45,3 +45,8 @@ loginButton{
     color: #ff9900;
     font: x-large;
 }
+
+.switch {
+    size: small;
+    color: white;
+}

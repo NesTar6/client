@@ -1,25 +1,26 @@
 .signUpWrapper{
     margin: 5px;
     padding-top: 5px;
-    border: 3px solid black;
+    border: 3px dashed rgb(255, 255, 255);
     height: 70%;
-    width: 90%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
 justify-content: space-evenly;
 }
+
 .signUpForm{
     width:90%;
     color:blanchedalmond;
     background-color:cornsilk;
 }
 .signUpButton{
-width: 90%;
+width: 95%;
 }
 .lineBreak{
     border: none;
-    width: 85%;
+    width: 90%;
     background-color: #ff9900;
     /* color:black; */ 
     height: 2px;
@@ -31,25 +32,22 @@ width: 90%;
 
 /* SIGN UP SWITCHES */
 
-.switchGroup {
-    border: 3px solid rgb(255, 0, 0);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.nestedGroup{
-    display: flex;
-    justify-content: space-evenly;
-    border: 2px solid black;
 
-}
 .switchWrapper{
+    margin: 3px;
     border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+}
+.switchColumn{
+    border: 3px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+    justify-content: space-evenly;
+    height: 200px;
 }
 
 p{
