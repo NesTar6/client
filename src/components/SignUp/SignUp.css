@@ -11,12 +11,12 @@ justify-content: space-evenly;
 }
 
 .signUpForm{
-    width:90%;
+    width:95%;
     color:blanchedalmond;
     background-color:cornsilk;
 }
 .signUpButton{
-width: 95%;
+width: 90%;
 }
 .lineBreak{
     border: none;
@@ -41,11 +41,12 @@ width: 95%;
     align-items: center;
   
 }
+/* label positioning off due to material ui */
 .switchColumn{
     border: 3px solid white;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-evenly;
     height: 200px;
 }
@@ -57,4 +58,8 @@ p{
     display: flex;
     justify-content: center;
 
+}
+
+.MuiSwitch-track{
+    background-color: wheat;
 }
