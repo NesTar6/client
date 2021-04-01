@@ -5,7 +5,36 @@
 
 
 body {
-  background-color: #FFF8E7;
+  background-color:#fff8e7;
+  /* background-color: #3B2826;
+  background: linear-gradient(white, #3B2826);
+  border: 2px solid white;
+  background-image:  url("https://i.imgur.com/hHZ88wC.png");
+  background-repeat: no-repeat; */
+}
+.body{
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+
+}
+.column{
+  /* border: 2px solid black; */
+}
+.column2{   
+  margin-top: 5px;
+  /* border: 2px solid red; */
+  width: 50vw;
+  height: 90vh;
+  background-image: url("https://i.imgur.com/98bCvr0.png");
+  background-position-y: 90px;
+  background-position-x: -100px;
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-color: #fff8e7;
+
 }
 
 .title {
@@ -36,3 +65,6 @@ body {
   border-radius: 10px;
 }
 
+.dogPng{
+  
+}

@@ -11,10 +11,15 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-
-        <Route exact path="/" component={SignIn} />
-        <Route exact path="/home" component={Home} />
-      </Router>
+        <div className="body">
+          <div className="column">
+            <Route exact path="/" component={SignIn} />
+            <Route exact path="/home" component={Home} />
+          </div>
+          <div className="column2"></div>
+        </div>
+         
+      </Router> 
     </div>
   );
 }

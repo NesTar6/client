@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Link, Route, Router } from 'react-router-dom';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import HomeIcon from '@material-ui/icons/Home';
 import './Header.css';
 
 // const Header = () => (
@@ -20,12 +21,6 @@ import './Header.css';
 //           {' '}
 //         </Link>
 //       </li>
-//       <li>
-//       <AddCircleIcon />
-//       </li>
-//       <li>
-//       <AccountCircleIcon />
-//       </li>
 //     </ul>
 //   </nav>
 // );
@@ -38,14 +33,18 @@ import './Header.css';
 </li> 
   <div className="headerAnchors">
     <li>
+          <HomeIcon className="headerIcons" style={{ fontSize: 55 }}/>
+    </li>
+    <li>
       <Link to="/">
         {' '}
-         <AccountCircleIcon className="headerIcons" style={{ fontSize: 60 }}/> 
+         <AccountCircleIcon className="headerIcons" style={{ fontSize: 55 }}/> 
         {' '}
+       
       </Link>
       </li>
     <li>
-  <AddCircleIcon className="headerIcons" style={{ fontSize: 60 }}/>
+  <AddCircleIcon className="headerIcons" style={{ fontSize: 55 }}/>
   </li>
   </div>
   
