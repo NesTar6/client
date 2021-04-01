@@ -5,6 +5,7 @@
 
   }
  .headerAnchors{
+   border-radius: 10px;
    border: 3px solid black;
    width: 10%;
    height: 80%;
@@ -15,25 +16,26 @@
   .list-items {
     /* border: 3px solid brown;  */
     font-family: 'Work Sans', sans-serif;
+    transition: ease-in all 356ms;
     margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   }
   
   .list-items {
     text-decoration: none;
+    transition: ease-in all 356ms;
     /* color: #000000; */
   }
   
   .list-items :hover {
+    transition: ease-in all 356ms;
     color: #F58212;
   }
   
   .list-items :hover {
-    font-size: 130%;
     color: #F58212;
     list-style: none;
   }

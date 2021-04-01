@@ -4,8 +4,13 @@
 }
 
 
+html {
+  height: 100%;
+}
+
 body {
-  background-color: #FFF8E7;
+  background: linear-gradient(135deg,  #FFF8E7, #f5c681);
+  height: 100%;
 }
 
 .title {
@@ -15,8 +20,7 @@ body {
 }
 
 .card-content {
-  /* border: 2px solid black; */
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;

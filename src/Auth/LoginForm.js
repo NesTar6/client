@@ -89,7 +89,7 @@ const LoginForm = withStyles(styles)((props) => {
 
       <div className="loginAnchors">
         <button className="forgotPassword" type="button">Forgot password?</button>
-        <button className="signUpAnchor" type="button" onClick={console.log('testing sign up')}>
+        <button className="signUpAnchor" type="button" onClick={props.onSignUp}>
           Sign up
         </button>
 
