@@ -23,3 +23,56 @@
     color:blanchedalmond;
     background-color:cornsilk;
 }
+
+.loginButton{
+    width: 90%;
+}
+.loginAnchors{
+    border: 2px solid wheat;
+    display: flex;
+    justify-content: space-around;
+    margin: 3px;
+    width: 250px;
+    color: wheat;
+    cursor: pointer;
+}
+
+
+.forgotPassword{
+    color: #ffffff;
+    font: x-large;
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+
+.forgotPassword:hover{
+    color: #ff9900;
+    font: x-large;
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+.signUpAnchor{
+    color: #ffffff;
+    font: x-large;
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+
+.signUpAnchor:hover{
+    color: #ff9900;
+    font: x-large;
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}

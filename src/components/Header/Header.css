@@ -1,0 +1,66 @@
+.header {
+    background-color: #FFF8E7;
+    width: 100%;
+    /* display: flex; */
+
+  }
+ .headerAnchors{
+   border-radius: 10px;
+   border: 3px solid black;
+   width: 10%;
+   height: 80%;
+   display: flex;
+   justify-content: space-between;
+ }
+
+  .list-items {
+    /* border: 3px solid brown;  */
+    font-family: 'Work Sans', sans-serif;
+    transition: ease-in all 356ms;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  }
+  
+  .list-items {
+    text-decoration: none;
+    transition: ease-in all 356ms;
+    /* color: #000000; */
+  }
+  
+  .list-items :hover {
+    transition: ease-in all 356ms;
+    color: #F58212;
+  }
+  
+  .list-items :hover {
+    color: #F58212;
+    list-style: none;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  }
+  
+  .list-items  {
+    font-size: 120%;
+    transition: all ease-in-out 356ms;
+    color: #000000;
+    list-style: none;
+  }
+  
+.headerIcons{
+  transition: all ease-in-out 356ms;
+  color: #3B2826;
+  list-style: none;
+}
+
+.headerIcons :hover{
+  font-size: 130%;
+  color: #F58212;
+  list-style: none;
+}
+
+/* AccounrCircleIcon{
+  margin-right: 22px;
+} */

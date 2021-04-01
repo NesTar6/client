@@ -8,24 +8,25 @@ const Home = (props) => {
 
     let loadingDiv = <Loader />
 
-    React.useEffect(()=> {
-        fetch('http://localhost:3001/api')
-        .then(res => res.json())
-        .then(res => {
-            setDogData(res)
-            setIsLoading(false)
-        })
-    },[])
-
     if(!isLoading) loadingDiv = <Carousel addFav={props.addFav} content={dogData}/> 
+  React.useEffect(() => {
+    fetch('http://localhost:3001/api')
+      .then((res) => res.json())
+      .then((res) => {
+        setDogData(res);
+        setIsLoading(false);
+      });
+  }, []);
 
-    return (
-    <div className='card-content'>
-        <div className='match-screen'>
-          {loadingDiv}
-        </div>
-      </div> 
-  )
-}
+  if (!isLoading) loadingDiv = <Carousel content={dogData} />;
 
-export default Home 
+  return (
+    <div className="card-content">
+      <div className="match-screen">
+        {loadingDiv}
+      </div>
+    </div>
+  );
+};
+
+export default Home;
