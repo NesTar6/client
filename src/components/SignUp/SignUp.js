@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 import React from 'react'
 import './SignUp.css'
 
-const styles = theme => ({
+const styles = () => ({
     input: {
       height: 40
     },

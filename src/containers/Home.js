@@ -1,11 +1,11 @@
 import React from 'react'
-import Carousel from '../components/Carousel/Carousel'
-import Loader from '../components/Loader/Loader'
+import Carousel from '../components/Carousel/Carousel';
+import Loader from '../components/Loader/Loader';
 
-const Home = () => {
+const Home = (props) => {
     const [dogData, setDogData] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
-    
+
     let loadingDiv = <Loader />
 
     React.useEffect(()=> {
@@ -17,7 +17,7 @@ const Home = () => {
         })
     },[])
 
-    if(!isLoading) loadingDiv = <Carousel content={dogData}/> 
+    if(!isLoading) loadingDiv = <Carousel addFav={props.addFav} content={dogData}/> 
 
     return (
     <div className='card-content'>

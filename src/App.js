@@ -2,11 +2,22 @@ import './App.css';
 import React from 'react'
 
 import Home from './containers/Home'
-import SignIn from './containers/SignIn'
+import SignIn from './containers/SignIn/SignIn'
+import Favorites from './containers/Favorites/Favorites'
 
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 function App() {
+  const [favs, setFavs] = React.useState([])
+
+  const addFav = (dogData) => {
+      const newFavs = favs
+      newFavs.push(dogData)
+      setFavs(newFavs)
+      console.log(favs)
+  }
+
+  
 
   return (
     <div className="App">
@@ -20,12 +31,13 @@ function App() {
                 <h3 className='title'>Bow-Wow</h3>
               </li>
               <li>
-              <Link to="/"> <h3>Login</h3> </Link> 
+              <Link to="/favorites"> <h3>Favorites</h3> </Link> 
               </li>
             </ul>
           </nav>
           <Route exact path="/" component={SignIn}/>
-          <Route exact path="/home" component={Home}/>
+          <Route exact path="/home" render={()=><Home addFav={addFav}/>}/>
+          <Route exact path="/favorites" render={() => <Favorites favData={favs}/>}/>
       </Router>
     </div>
   )

@@ -1,8 +1,8 @@
 import { Button } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import './SignIn.css';
-import LoginForm from '../../src/Auth/LoginForm';
-import SignUp from '../../src/components/SignUp/SignUp'
+import LoginForm from '../../Auth/LoginForm';
+import SignUp from '../../components/SignUp/SignUp'
 
 const SignIn = () => {
 // setState
