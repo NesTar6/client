@@ -1,31 +1,31 @@
-import React from 'react'
-import Carousel from '../components/Carousel/Carousel'
-import Loader from '../components/Loader/Loader'
+import React from 'react';
+import Carousel from '../components/Carousel/Carousel';
+import Loader from '../components/Loader/Loader';
 
 const Home = () => {
-    const [dogData, setDogData] = React.useState([]);
-    const [isLoading, setIsLoading] = React.useState(true);
-    
-    let loadingDiv = <Loader />
+  const [dogData, setDogData] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
 
-    React.useEffect(()=> {
-        fetch('http://localhost:3001/api')
-        .then(res => res.json())
-        .then(res => {
-            setDogData(res)
-            setIsLoading(false)
-        })
-    },[])
+  let loadingDiv = <Loader />;
 
-    if(!isLoading) loadingDiv = <Carousel content={dogData}/> 
+  React.useEffect(() => {
+    fetch('http://localhost:3001/api')
+      .then((res) => res.json())
+      .then((res) => {
+        setDogData(res);
+        setIsLoading(false);
+      });
+  }, []);
 
-    return (
-    <div className='card-content'>
-        <div className='match-screen'>
-          {loadingDiv}
-        </div>
-      </div> 
-  )
-}
+  if (!isLoading) loadingDiv = <Carousel content={dogData} />;
 
-export default Home 
+  return (
+    <div className="card-content">
+      <div className="match-screen">
+        {loadingDiv}
+      </div>
+    </div>
+  );
+};
+
+export default Home;
