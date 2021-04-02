@@ -1,16 +1,19 @@
 .header {
     background-color: #FFF8E7;
     width: 100%;
+    /* border: 3px solid orange; */
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
     /* display: flex; */
 
   }
  .headerAnchors{
    border-radius: 10px;
    border: 3px solid black;
-   width: 10%;
+   width: 15%;
    height: 80%;
    display: flex;
    justify-content: space-between;
+   align-items: center;
  }
 
   .list-items {
@@ -22,6 +25,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    /* box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3); */
   }
   
   .list-items {

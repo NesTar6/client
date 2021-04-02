@@ -18,8 +18,6 @@ const Home = (props) => {
       });
   }, []);
 
-  if (!isLoading) loadingDiv = <Carousel content={dogData} />;
-
   return (
     <div className="card-content">
       <div className="match-screen">

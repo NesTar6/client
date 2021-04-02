@@ -9,9 +9,14 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg,  #FFF8E7, #f5c681);
-  height: 100%;
+  background-color:#fff8e7;
+  /* background-color: #3B2826;
+  background: linear-gradient(white, #3B2826);
+  border: 2px solid white;
+  background-image:  url("https://i.imgur.com/hHZ88wC.png");
+  background-repeat: no-repeat; */
 }
+
 
 .title {
   font-size: 200%;
@@ -40,3 +45,6 @@ body {
   border-radius: 10px;
 }
 
+.dogPng{
+  
+}
