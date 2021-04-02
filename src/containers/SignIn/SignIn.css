@@ -10,17 +10,13 @@
 .signInCard {
     /* border: 3px solid rgb(201, 0, 0); */
     background-color: #3B2826;
-    /* position:fixed; */
     height: 550px;
-    /* min-height: 400px; */
     width: 400px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-image: url("https://www.muralswallpaper.com/app/uploads/Neutral-Dog-Paw-Print-Pattern-Wallpaper-Mural-Plain.jpg"); */
-
 }
 
 .signInLogo {
