@@ -25,33 +25,32 @@ import './Header.css';
 //   </nav>
 // );
 
- const Header = () => (
-<nav className="header"> 
-<ul className="list-items" >
-<li>
-  <Link to="/home"><h2>Bow-Wow</h2></Link>
-</li> 
-  <div className="headerAnchors">
-    <li>
-          <HomeIcon className="headerIcons" style={{ fontSize: 55 }}/>
-    </li>
-    <li>
-      <Link to="/">
-        {' '}
-         <AccountCircleIcon className="headerIcons" style={{ fontSize: 55 }}/> 
-        {' '}
-       
-      </Link>
+const Header = () => (
+  <nav className="header">
+    <ul className="list-items">
+      <li>
+        <Link to="/home"><h2>Bow-Wow</h2></Link>
       </li>
-    <li>
-  <AddCircleIcon className="headerIcons" style={{ fontSize: 55 }}/>
-  </li>
-  </div>
-  
-</ul>
- 
+      <div className="headerAnchors">
+        <li>
+          <HomeIcon className="headerIcons" style={{ fontSize: 55 }} />
+        </li>
+        <li>
+          <Link to="/">
+            {' '}
+            <AccountCircleIcon className="headerIcons" style={{ fontSize: 55 }} />
+            {' '}
 
-   </nav>
- );
+          </Link>
+        </li>
+        <li>
+          <AddCircleIcon className="headerIcons" style={{ fontSize: 55 }} />
+        </li>
+      </div>
+
+    </ul>
+
+  </nav>
+);
 
 export default Header;

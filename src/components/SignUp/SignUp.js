@@ -114,27 +114,48 @@ const SignUp = withStyles(styles)((props) => {
           <FormControlLabel
             labelPlacement="start"
             style={{ color: 'white' }}
-            control={
-              <Switch className="switch" onChange={() => onSwitchChange('children')} value={children} style={{ color: 'orange' }} color="primary" size="medium" />
-  }
+            control={(
+              <Switch
+                className="switch"
+                onChange={() => onSwitchChange('children')}
+                value={children}
+                style={{ color: 'orange' }}
+                color="primary"
+                size="medium"
+              />
+            )}
             label="Child friendly"
           />
 
           <FormControlLabel
             labelPlacement="start"
             style={{ color: 'white' }}
-            control={
-              <Switch className="switch" onChange={() => onSwitchChange('cat')} value={cat} style={{ color: 'orange' }} color="primary" size="medium" />
-  }
+            control={(
+              <Switch
+                className="switch"
+                onChange={() => onSwitchChange('cat')}
+                value={cat}
+                style={{ color: 'orange' }}
+                color="primary"
+                size="medium"
+              />
+            )}
             label="Cat friendly"
           />
 
           <FormControlLabel
             labelPlacement="start"
             style={{ color: 'white' }}
-            control={
-              <Switch className="switch" onChange={() => onSwitchChange('neutered')} value={neutered} style={{ color: 'orange' }} color="primary" size="medium" />
-  }
+            control={(
+              <Switch
+                className="switch"
+                onChange={() => onSwitchChange('neutered')}
+                value={neutered}
+                style={{ color: 'orange' }}
+                color="primary"
+                size="medium"
+              />
+            )}
             label="Neutered"
           />
         </div>

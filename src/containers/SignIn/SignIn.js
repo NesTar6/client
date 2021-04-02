@@ -2,7 +2,7 @@ import { Button } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import './SignIn.css';
 import LoginForm from '../../Auth/LoginForm';
-import SignUp from '../../components/SignUp/SignUp'
+import SignUp from '../../components/SignUp/SignUp';
 
 const SignIn = () => {
 // setState
@@ -24,9 +24,9 @@ const SignIn = () => {
   };
 
   const onSignUp = () => {
-    console.log('signing up')
-    setSignUp(true)
-  }
+    console.log('signing up');
+    setSignUp(true);
+  };
 
   // components
   let homeCard = (
@@ -41,7 +41,7 @@ const SignIn = () => {
   }
 
   if (logginIn) {
-    homeCard = <LoginForm onSignUp={onSignUp}/>;
+    homeCard = <LoginForm onSignUp={onSignUp} />;
   }
   return (
     <div>
@@ -53,8 +53,7 @@ const SignIn = () => {
           {homeCard}
         </div>
       </div>
-      <div className="column2">
-      </div>
+      <div className="column2" />
     </div>
   );
 };
