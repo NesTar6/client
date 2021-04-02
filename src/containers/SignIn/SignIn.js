@@ -44,12 +44,16 @@ const SignIn = () => {
     homeCard = <LoginForm onSignUp={onSignUp}/>;
   }
   return (
-    <div className="signInWrapper">
-      <div className="signInCard">
-        <div className="signInLogo">
-          <img className="dogIcon" alt="bowow logo" src="https://i.imgur.com/KREnZnZ.png" />
+    <div>
+      <div className="signInWrapper">
+        <div className="signInCard">
+          <div className="signInLogo">
+            <img className="dogIcon" alt="bowow logo" src="https://i.imgur.com/KREnZnZ.png" />
+          </div>
+          {homeCard}
         </div>
-        {homeCard}
+      </div>
+      <div className="column2">
       </div>
     </div>
   );
