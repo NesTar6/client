@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     /* border: 3px solid black; */
-    width: 50vw;
+    width: 100vw;
     height: 90vh;
 }
 /* why does component expand outside of wrapper when screen size is minimized*/
@@ -50,3 +50,20 @@
     border-radius: 9999px;
 }
 
+
+/* .column{
+    /* border: 2px solid black; */
+  /* } */
+  .column2{   
+    margin-top: 5px;
+    /* border: 2px solid red; */
+    width: 50vw;
+    height: 90vh;
+    background-image: url("https://i.imgur.com/98bCvr0.png");
+    background-position-y: 90px;
+    background-position-x: -100px;
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-color: #fff8e7;
+  
+  } 

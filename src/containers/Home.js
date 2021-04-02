@@ -1,13 +1,14 @@
-import React from 'react';
+import React from 'react'
 import Carousel from '../components/Carousel/Carousel';
 import Loader from '../components/Loader/Loader';
 
-const Home = () => {
-  const [dogData, setDogData] = React.useState([]);
-  const [isLoading, setIsLoading] = React.useState(true);
+const Home = (props) => {
+    const [dogData, setDogData] = React.useState([]);
+    const [isLoading, setIsLoading] = React.useState(true);
 
-  let loadingDiv = <Loader />;
+    let loadingDiv = <Loader />
 
+    if(!isLoading) loadingDiv = <Carousel addFav={props.addFav} content={dogData}/> 
   React.useEffect(() => {
     fetch('http://localhost:3001/api')
       .then((res) => res.json())
@@ -16,8 +17,6 @@ const Home = () => {
         setIsLoading(false);
       });
   }, []);
-
-  if (!isLoading) loadingDiv = <Carousel content={dogData} />;
 
   return (
     <div className="card-content">
