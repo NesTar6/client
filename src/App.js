@@ -18,8 +18,6 @@ function App() {
       console.log(favs)
   }
 
-  
-
   return (
     <div className="App">
       <Router>

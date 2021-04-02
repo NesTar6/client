@@ -33,9 +33,11 @@ import './Header.css';
  const Header = () => (
 <nav className="header"> 
 <ul className="list-items" >
-<li>
-  <Link to="/home"><h2>Bow-Wow</h2></Link>
-</li> 
+  <Link to="/home">
+    <li>
+      {<div><h2>Bow-Wow</h2></div>}
+    </li> 
+  </Link>
   <div className="headerAnchors">
     <li>
       <Link to="/">

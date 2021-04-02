@@ -36,7 +36,7 @@ const Carousel = (props) => {
     }, [index])
 
     const numSlides = props.content.length;
-
+    console.log(props.content)
     const onArrowClick = (direction) => {
         if(!disabled) {
         const increment = 1;

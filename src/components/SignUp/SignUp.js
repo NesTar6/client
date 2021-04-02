@@ -80,6 +80,7 @@ const SignUp = withStyles(styles)((props) => {
         },
       ),
     })
+      .catch((err) = console.log(err))
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
