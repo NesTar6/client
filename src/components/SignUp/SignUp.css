@@ -12,8 +12,7 @@ justify-content: space-evenly;
 
 .signUpForm{
     width:95%;
-    color:blanchedalmond;
-    background-color:cornsilk;
+    background-color:#fff8e7;
 }
 .signUpButton{
 width: 90%;
@@ -54,12 +53,12 @@ width: 90%;
 p{
     border: 1px dashed white;
     font-size: small ;
-    color: papayawhip;
+    color:  #fff8e7;
     display: flex;
     justify-content: center;
 
 }
 
 .MuiSwitch-track{
-    background-color: wheat;
+    background-color: #fff8e7;
 }

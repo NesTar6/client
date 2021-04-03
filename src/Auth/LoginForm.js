@@ -36,8 +36,6 @@ const LoginForm = withStyles(styles)((props) => {
     console.log('E-Mail: ', email, ' Password: ', password);
     fetch('http://localhost:3001/login', {
       method: 'POST',
-      //mode: 'cors',
-      //credentials: 'include',
       headers: {
         'access-control-allow-origin': '*',
         'content-type': 'application/json',

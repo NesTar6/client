@@ -31,15 +31,17 @@ import './Header.css';
        
       </Link>
       </li>
-    <li>
-  <AddCircleIcon className="headerIcons" style={{ fontSize: 55 }}/>
-  </li>
-  </div>
-  
-</ul>
- 
+        <li>
+        <Link to="/addDog">
+            {' '}
+          <AddCircleIcon className="headerIcons" style={{ fontSize: 55 }} />
+          {' '}
 
-   </nav>
- );
+          </Link>
+        </li>
+      </div>
+    </ul>
+  </nav>
+);
 
 export default Header;
