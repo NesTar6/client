@@ -223,45 +223,46 @@ const AddDog = withStyles(styles)((props) => {
             label="Vaccinated"
           />
           <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel style={{ color: '#3B2826' }} htmlFor="outlined-age-native-simple">age</InputLabel>
+            <InputLabel style={{ color: '#3B2826' }} htmlFor="outlined-age-native-simple">Age</InputLabel>
             <Select
               native
               className="testAD"
               style={{ color: 'black', backgroundColor: '#fff8e7' }}
               label="Age"
-              inputProps={{ name: 'age' }}
+              inputProps={{ name: 'Age' }}
               onChange={(e) => onSelectChange(e, 'age')}
             >
               {/* {ageList()} */}
               <option aria-label="None" value="" />
-              <option value="puppy">puppy</option>
-              <option value="young">young</option>
-              <option value="adult">adult</option>
-              <option value="senior">senior</option>
+              <option value="Puppy">Puppy</option>
+              <option value="Young">Young</option>
+              <option value="Adult">Adult</option>
+              <option value="Senior">Senior</option>
             </Select>
           </FormControl>
 
           <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel style={{ color: '#3B2826' }} htmlFor="outlined-age-native-simple">gender</InputLabel>
+            <InputLabel style={{ color: '#3B2826' }} htmlFor="outlined-age-native-simple">Gender</InputLabel>
             <Select
               native
               className="testAD"
               style={{ color: 'black', backgroundColor: '#fff8e7' }}
-              label="gender"
-              inputProps={{ name: 'gender' }}
+              label="Gender"
+              inputProps={{ name: 'Gender' }}
               onChange={(e) => onSelectChange(e, 'gender')}
             >
               <option aria-label="None" value="" />
-              <option value="male">male</option>
-              <option value="female">female</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
             </Select>
           </FormControl>
-
+        </div>
+      </div>
+      <div>
           <Button className="addDogButton" variant="contained" onClick={onSubmit}>
             Submit
           </Button>
         </div>
-      </div>
     </div>
   );
 });
