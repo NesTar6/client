@@ -10,10 +10,11 @@ const Header = () => (
     <ul className="list-items">
 
       <li>
-
+      <Link to="/home" style={{ textDecoration: 'none', color: '#3B2826' }}>
         <div>
           <h2>Bow-Wow</h2>
         </div>
+        </Link>
 
       </li>
 
