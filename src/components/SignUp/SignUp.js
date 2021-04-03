@@ -16,6 +16,7 @@ const styles = (theme) => ({
 });
 
 const SignUp = withStyles(styles)((props) => {
+  console.log(props)
   const { classes } = props;
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -57,28 +58,28 @@ const SignUp = withStyles(styles)((props) => {
     }
   };
 
-  const onSubmit = () => {
+  console.log(email)
+  console.log(password)
+
+  const onSubmit = (props) => {
     fetch('http://localhost:3001/signup', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(
-        {
-          user: {
-            email,
-            password,
-          },
-          preferences: {
-            children,
-            cats: cat,
-            spayed: neutered,
-            house_trained: houseTrained,
-            special_needs: specialNeeds,
-            shots_current: shots,
-          },
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        user: {
+          email: email,
+          password: password,
         },
-      ),
+        preferences: {
+          children,
+          cats: cat,
+          spayed: neutered,
+          house_trained: houseTrained,
+          special_needs: specialNeeds,
+          shots_current: shots,
+        },
+      }),
+      
     })
       .catch((err) = console.log(err))
       .then((res) => res.json())
@@ -96,7 +97,7 @@ const SignUp = withStyles(styles)((props) => {
         size="small"
         InputProps={{ className: classes.input }}
         InputLabelProps={{ shrink: true }}
-        onChange={(e) => handleFormChange(e, 'password')}
+        onChange={(e) => handleFormChange(e, 'email')}
       />
       <TextField
         className="signUpForm"

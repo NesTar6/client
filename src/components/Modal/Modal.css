@@ -20,7 +20,7 @@
     width: 90%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 0.5fr 6.5fr 3fr;
+    grid-template-rows: 0.5fr 3.25fr 3.25fr 3fr;
     column-gap: 5px;
     row-gap: 15px;
 }
@@ -56,7 +56,7 @@
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row-end: 4;
     
   }
 
@@ -69,6 +69,10 @@
   }
 
  .box2 {
+    display: 'flex';
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
@@ -77,8 +81,24 @@
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row-end: 3;
  }
+
+ .box8 {
+   display: 'flex';
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+   text-align: center;
+   padding: 10px;
+   border-radius: 10px;
+   border: 1px solid #5e5d5c;
+   box-shadow: 5px 5px 5px #5e5d5c;
+   grid-column-start: 4;
+   grid-column-end: 6;
+   grid-row-start: 3;
+   grid-row-end: 4;
+}
 
  .box2 p {
     text-align: center;
@@ -89,8 +109,8 @@
     box-shadow: 5px 5px 5px #5e5d5c;
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
  }
  .box3 > img {
     border-radius: 10px;
@@ -105,8 +125,8 @@
     box-shadow: 5px 5px 5px #5e5d5c;
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
  }
  .box4 > img {
     border-radius: 10px;
@@ -120,8 +140,8 @@
     box-shadow: 5px 5px 5px #5e5d5c;
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
  }
  .box5 > img {
     border-radius: 10px;
@@ -135,8 +155,8 @@
     box-shadow: 5px 5px 5px #5e5d5c;
     grid-column-start: 4;
     grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
  }
  .box6 > img {
     border-radius: 10px;
@@ -150,8 +170,8 @@
     box-shadow: 5px 5px 5px #5e5d5c;
     grid-column-start: 5;
     grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
  }
  .box7 > img {
     border-radius: 10px;
