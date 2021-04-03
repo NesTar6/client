@@ -6,27 +6,27 @@ const Modal = (props) => {
 
  console.log(props.data)
 
- if(props.data.photos === null) {
-   props.data.photos = [{}]
- } else {
-   props.data.photos = [props.photos]
- }
+//  if(props.data.photos === null) {
+//    props.data.photos = [{}]
+//  } else {
+//    props.data.photos = [props.photos]
+//  }
  
 
- if(!props.data.breeds) {
-  props.data.breeds = {primary: 'Good Boy'}
- }
+//  if(!props.data.breeds) {
+//   props.data.breeds = {primary: 'Good Boy'}
+//  }
 
- if(!props.data.contact) {
-   props.data.contact = {
-  email: null,
-  phone: null,
-  address: null}
- }
+//  if(!props.data.contact) {
+//    props.data.contact = {
+//   email: null,
+//   phone: null,
+//   address: null}
+//  }
 
- if(props.data.contact.address) {
-  props.data.contact.address = null
-}
+//  if(props.data.contact.address) {
+//   props.data.contact.address = null
+// }
 
  console.log(props.data)
 

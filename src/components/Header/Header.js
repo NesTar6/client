@@ -12,7 +12,7 @@ const Header = () => (
       <li>
       <Link to="/home" style={{ textDecoration: 'none', color: '#3B2826' }}>
         <div>
-          <h2>Bow-Wow</h2>
+          <img style={{height: '50px',}} src="https://i.imgur.com/P230dOq.png"></img>
         </div>
         </Link>
 
