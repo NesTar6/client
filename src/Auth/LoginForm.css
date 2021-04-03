@@ -1,6 +1,6 @@
 .loginForm{
     margin: 5px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 35%;
     width: 90%;
     display: flex;
@@ -28,7 +28,7 @@
     width: 90%;
 }
 .loginAnchors{
-    border: 2px solid wheat;
+    /* border: 2px solid wheat; */
     display: flex;
     justify-content: space-around;
     margin: 3px;
