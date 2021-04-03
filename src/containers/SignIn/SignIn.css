@@ -29,7 +29,6 @@
 }
 
 .signInLogo {
-    /* border: 3px solid black; */
     width: auto;
     font-size: 50px;
 }
@@ -39,7 +38,6 @@
 }
 
 .signInButtonGroup{
-    /* border: 2px solid black; */
     margin: 5px;
     height: 40%;
     width: 90%;
@@ -57,7 +55,6 @@
 
 
   .rightColumn{   
-    /* border: 2px solid red; */
     margin-top: 5px;
     width: 50vw;
     height: 90vh;

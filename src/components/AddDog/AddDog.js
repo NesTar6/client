@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 /* eslint-disable no-plusplus */
 import {
   Button, TextField, FormControlLabel, FormControl,
@@ -31,15 +32,8 @@ const AddDog = withStyles(styles)((props) => {
   const [houseTrained, setHouseTrained] = React.useState(false);
   const [specialNeeds, setSpecialNeeds] = React.useState(false);
   const [shots, setShots] = React.useState(false);
+  const [img, setImg] = React.useState('');
 
-  const ageList = () => {
-    const list = [];
-    for (let i = 0; i <= 20; i++) {
-      // console.log(i);
-      list.push(<option value={i}>{i}</option>);
-    }
-    return list;
-  };
   // EDGE CASES NEEDED
   const handleFormChange = (e, type) => {
     // e.preventDefault();
@@ -53,6 +47,9 @@ const AddDog = withStyles(styles)((props) => {
       setLocation(e.target.value);
       // console.log(location);
     }
+    if (type === 'image') {
+      setImg(e.target.value);
+    }
   };
 
   const onSubmit = () => {
@@ -63,24 +60,25 @@ const AddDog = withStyles(styles)((props) => {
       },
       body: JSON.stringify(
         {
-          name,
-          children,
+          name: name,
+          children: children,
           cats: cat,
           spayed: neutered,
+          house_trained: houseTrained,
           special_needs: specialNeeds,
           shots_current: shots,
-          age: 2,
-          gender: 'female',
-          description,
-          image: null,
-          location,
+          age: age,
+          gender: gender,
+          description: description,
+          photos: img,
+          location: location,
         },
       ),
     })
-    .then(res => res.json())
-    .then((res) => {
-      console.log(res);
-    });
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      });
   };
 
   const onSwitchChange = (type) => {
@@ -105,7 +103,6 @@ const AddDog = withStyles(styles)((props) => {
   };
 
   const onSelectChange = (e, type) => {
-    console.log(e.target.value);
     if (type === 'age') {
       setAge(e.target.value);
     }
@@ -117,146 +114,182 @@ const AddDog = withStyles(styles)((props) => {
   return (
     <div className="addDogWrapper">
       <div className="addDogCard">
+        <h1 className="cardName" style={{ textAlign: 'center' }}>HE CHEWED THE COUCH</h1>
         {/* FORMS */}
-        <TextField
-          className="addDogForm"
-          label="Name"
-          variant="filled"
-          InputProps={{ className: classes.input }}
-          InputLabelProps={{ shrink: true }}
-          onChange={(e) => handleFormChange(e, 'name')}
-        />
-
-        <TextField
-          className="addDogForm"
-          label="Description"
-          variant="filled"
-          InputProps={{ className: classes.input }}
-          InputLabelProps={{ shrink: true }}
-          onChange={(e) => handleFormChange(e, 'description')}
-        />
-
-        <TextField
-          className="addDogZipForm"
-          label="Zipcode"
-          variant="filled"
-          InputProps={{ className: classes.input }}
-          InputLabelProps={{ shrink: true }}
-          onChange={(e) => handleFormChange(e, 'location')}
-        />
-
-        {/* SWITCHES */}
-        <div className="addDogswitchColumn">
-          <FormControlLabel
-            labelPlacement="start"
-            style={{ color: 'white' }}
-            control={(
-              <Switch
-                className="switch"
-                onChange={() => onSwitchChange('children')}
-                style={{ color: 'orange' }}
-                color="primary"
-                size="medium"
-              />
-          )}
-            label="Child friendly"
-          />
-
-          <FormControlLabel
-            labelPlacement="start"
-            style={{ color: 'white' }}
-            control={(
-              <Switch
-                className="switch"
-                onChange={() => onSwitchChange('cat')}
-                style={{ color: 'orange' }}
-                color="primary"
-                size="medium"
-              />
-          )}
-            label="Cat friendly"
-          />
-
-          <FormControlLabel
-            labelPlacement="start"
-            style={{ color: 'white' }}
-            control={(
-              <Switch
-                className="switch"
-                onChange={() => onSwitchChange('neutered')}
-                style={{ color: 'orange' }}
-                color="primary"
-                size="medium"
-              />
-          )}
-            label="Neutered"
+        <div className="addDogFormGroup">
+          <TextField
+            className="addDogForm"
+            label="Name"
+            variant="filled"
+            InputProps={{ className: classes.input }}
+            InputLabelProps={{ shrink: true }}
+            onChange={(e) => handleFormChange(e, 'name')}
           />
         </div>
-        <div className="addDogswitchColumn">
-          <FormControlLabel
-            labelPlacement="start"
-            style={{ color: 'white' }}
-            control={(
-              <Switch
-                className="switch"
-                onChange={() => onSwitchChange('specialNeeds')}
-                style={{ color: 'orange' }}
-                color="primary"
-                size="medium"
-              />
-          )}
-            label="Special needs"
+        <div className="addDogFormGroup">
+          <TextField
+            className="addDogForm"
+            label="Description"
+            variant="filled"
+            InputProps={{ className: classes.input }}
+            InputLabelProps={{ shrink: true }}
+            onChange={(e) => handleFormChange(e, 'description')}
           />
+        </div>
 
-          <FormControlLabel
-            labelPlacement="start"
-            style={{ color: 'white' }}
-            control={(
-              <Switch
-                className="switch"
-                onChange={() => onSwitchChange('shots')}
-                style={{ color: 'orange' }}
-                color="primary"
-                size="medium"
-              />
-          )}
-            label="Vaccinated"
+        <div className="addDogFormGroup">
+          <TextField
+            className="addDogForm"
+            label="Image URL"
+            variant="filled"
+            InputProps={{ className: classes.input }}
+            InputLabelProps={{ shrink: true }}
+            onChange={(e) => handleFormChange(e, 'image')}
+          />
+        </div>
+        <div className="addDogSelects">
+
+          <TextField
+            style={{ margin: '10px' }}
+            className="addDogZipForm"
+            label="Zipcode"
+            variant="filled"
+            InputProps={{ className: classes.input }}
+            InputLabelProps={{ shrink: true }}
+            onChange={(e) => handleFormChange(e, 'location')}
           />
           <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel style={{ color: '#3B2826' }} htmlFor="outlined-age-native-simple">age</InputLabel>
+            <InputLabel style={{ color: '#3B2826' }} htmlFor="outlined-age-native-simple">Age</InputLabel>
             <Select
               native
-              className="testAD"
-              style={{ color: 'black', backgroundColor: '#fff8e7' }}
+              className="addDogSelect"
+              style={{ color: 'black', backgroundColor: '#fff8e7', height: '50px' }}
               label="Age"
               inputProps={{ name: 'age' }}
               onChange={(e) => onSelectChange(e, 'age')}
             >
               {/* {ageList()} */}
               <option aria-label="None" value="" />
-              <option value="puppy">puppy</option>
-              <option value="young">young</option>
-              <option value="adult">adult</option>
-              <option value="senior">senior</option>
+              <option value="puppy">Puppy</option>
+              <option value="young">Young</option>
+              <option value="adult">Adult</option>
+              <option value="senior">Senior</option>
             </Select>
           </FormControl>
 
           <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel style={{ color: '#3B2826' }} htmlFor="outlined-age-native-simple">gender</InputLabel>
+            <InputLabel style={{ color: '#3B2826' }} htmlFor="outlined-age-native-simple">Gender</InputLabel>
             <Select
               native
-              className="testAD"
-              style={{ color: 'black', backgroundColor: '#fff8e7' }}
-              label="gender"
-              inputProps={{ name: 'gender' }}
+              className="addDogSelect"
+              style={{ color: 'black', backgroundColor: '#fff8e7', height: '50px' }}
+              label="Gender"
+              inputProps={{ name: 'Gender' }}
               onChange={(e) => onSelectChange(e, 'gender')}
             >
               <option aria-label="None" value="" />
-              <option value="male">male</option>
-              <option value="female">female</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
             </Select>
           </FormControl>
+        </div>
 
+        {/* SWITCHES */}
+        <div className="switchWrapper">
+          <div className="switchRow">
+            <FormControlLabel
+              labelPlacement="start"
+              style={{ color: 'white' }}
+              control={(
+                <Switch
+                  className="switch"
+                  onChange={() => onSwitchChange('children')}
+                  style={{ color: '#FF8000' }}
+                  color="primary"
+                  size="medium"
+                />
+          )}
+              label="Child friendly"
+            />
+
+            <FormControlLabel
+              labelPlacement="start"
+              style={{ color: 'white' }}
+              control={(
+                <Switch
+                  className="switch"
+                  onChange={() => onSwitchChange('cat')}
+                  style={{ color: '#FF8000' }}
+                  color="primary"
+                  size="medium"
+                />
+          )}
+              label="Cat friendly"
+            />
+
+            <FormControlLabel
+              labelPlacement="start"
+              style={{ color: 'white' }}
+              control={(
+                <Switch
+                  className="switch"
+                  onChange={() => onSwitchChange('neutered')}
+                  style={{ color: '#FF8000' }}
+                  color="primary"
+                  size="medium"
+                />
+          )}
+              label="Neutered"
+            />
+          </div>
+          <div className="switchRow">
+            <FormControlLabel
+              labelPlacement="start"
+              style={{ color: 'white' }}
+              control={(
+                <Switch
+                  className="switch"
+                  onChange={() => onSwitchChange('specialNeeds')}
+                  style={{ color: '#FF8000' }}
+                  color="primary"
+                  size="medium"
+                />
+          )}
+              label="Special needs"
+            />
+
+            <FormControlLabel
+              labelPlacement="start"
+              style={{ color: 'white' }}
+              control={(
+                <Switch
+                  className="switch"
+                  onChange={() => onSwitchChange('shots')}
+                  style={{ color: '#FF8000' }}
+                  color="primary"
+                  size="medium"
+                />
+          )}
+              label="Vaccinated"
+            />
+            <FormControlLabel
+              labelPlacement="start"
+              style={{ color: 'white' }}
+              control={(
+                <Switch
+                  className="switch"
+                  onChange={() => onSwitchChange('shots')}
+                  style={{ color: '#FF8000' }}
+                  color="primary"
+                  size="medium"
+                />
+          )}
+              label="House trained"
+            />
+          </div>
+
+        </div>
+        <div className="buttonWrapper">
           <Button className="addDogButton" variant="contained" onClick={onSubmit}>
             Submit
           </Button>

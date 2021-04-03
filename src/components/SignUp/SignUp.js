@@ -102,6 +102,7 @@ const SignUp = withStyles(styles)((props) => {
       <TextField
         className="signUpForm"
         label="Set password"
+        type="password"
         variant="filled"
         size="small"
         height="50%"
