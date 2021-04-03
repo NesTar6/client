@@ -16,7 +16,7 @@ const styles = (theme) => ({
 });
 
 const SignUp = withStyles(styles)((props) => {
-  console.log(props)
+  console.log(props);
   const { classes } = props;
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -58,8 +58,8 @@ const SignUp = withStyles(styles)((props) => {
     }
   };
 
-  console.log(email)
-  console.log(password)
+  console.log(email);
+  console.log(password);
 
   const onSubmit = (props) => {
     fetch('http://localhost:3001/signup', {
@@ -67,8 +67,8 @@ const SignUp = withStyles(styles)((props) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         user: {
-          email: email,
-          password: password,
+          email,
+          password,
         },
         preferences: {
           children,
@@ -79,7 +79,7 @@ const SignUp = withStyles(styles)((props) => {
           shots_current: shots,
         },
       }),
-      
+
     })
       .catch((err) = console.log(err))
       .then((res) => res.json())

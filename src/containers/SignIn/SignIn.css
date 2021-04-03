@@ -1,10 +1,19 @@
 .signInWrapper{
+    /* border: 3px dashed rgb(255, 0, 0); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.leftColumn{
+    /* border: 3px solid black; */
+    height: 90vh;
+    width: 45vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 3px solid black; */
-    width: 100vw;
-    height: 90vh;
 }
 /* why does component expand outside of wrapper when screen size is minimized*/
 .signInCard {
@@ -20,7 +29,7 @@
 }
 
 .signInLogo {
-    border: 3px solid black;
+    /* border: 3px solid black; */
     width: auto;
     font-size: 50px;
 }
@@ -30,8 +39,8 @@
 }
 
 .signInButtonGroup{
+    /* border: 2px solid black; */
     margin: 5px;
-    border: 2px solid black;
     height: 40%;
     width: 90%;
     display: flex;
@@ -47,19 +56,14 @@
 }
 
 
-/* .column{
-    /* border: 2px solid black; */
-  /* } */
-  .column2{   
-    margin-top: 5px;
+  .rightColumn{   
     /* border: 2px solid red; */
+    margin-top: 5px;
     width: 50vw;
     height: 90vh;
     background-image: url("https://i.imgur.com/98bCvr0.png");
-    background-position-y: 90px;
+    background-position-y: 100px;
     background-position-x: -100px;
     background-repeat: no-repeat;
     background-size:auto;
-    background-color: #fff8e7;
-  
   } 

@@ -44,8 +44,8 @@ const SignIn = (props) => {
     homeCard = <LoginForm addUserId={props.addUserId} onSignUp={onSignUp}/>;
   }
   return (
-    <div>
-      <div className="signInWrapper">
+    <div className="signInWrapper">
+      <div className="leftColumn">
         <div className="signInCard">
           <div className="signInLogo">
             <img className="dogIcon" alt="bowow logo" src="https://i.imgur.com/KREnZnZ.png" />
@@ -53,7 +53,7 @@ const SignIn = (props) => {
           {homeCard}
         </div>
       </div>
-      <div className="column2" />
+      <div className="rightColumn" />
     </div>
   );
 };

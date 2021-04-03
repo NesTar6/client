@@ -1,7 +1,7 @@
 .signUpWrapper{
     margin: 5px;
     padding-top: 5px;
-    border: 3px dashed rgb(255, 255, 255);
+    /* border: 3px dashed rgb(255, 255, 255); */
     height: 70%;
     width: 95%;
     display: flex;
@@ -21,7 +21,6 @@ width: 90%;
     border: none;
     width: 90%;
     background-color: #ff9900;
-    /* color:black; */ 
     height: 2px;
     content: 'OR';
     text-align: center;
@@ -34,7 +33,7 @@ width: 90%;
 
 .switchWrapper{
     margin: 3px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -42,7 +41,7 @@ width: 90%;
 }
 /* label positioning off due to material ui */
 .switchColumn{
-    border: 3px solid white;
+    /* border: 3px solid white; */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -51,7 +50,7 @@ width: 90%;
 }
 
 p{
-    border: 1px dashed white;
+    /* border: 1px dashed white; */
     font-size: small ;
     color:  #fff8e7;
     display: flex;
