@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import React from 'react';
 import './LoginForm.css';
+import {Redirect} from 'react-router-dom'
 
 const styles = (theme) => ({
   input: {
@@ -36,20 +37,24 @@ const LoginForm = withStyles(styles)((props) => {
     fetch('http://localhost:3001/login', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'access-control-allow-origin': '*',
+        'content-type': 'application/json',
+        'accept': 'application/json',
       },
       body: JSON.stringify(
         {
           user: {
-            email,
-            password,
+            email: email,
+            password: password,
           },
         },
       ),
     })
+      .catch(err => console.log)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        console.log(res)
+        props.addUserId(res.id)
       });
   };
 
@@ -89,7 +94,7 @@ const LoginForm = withStyles(styles)((props) => {
 
       <div className="loginAnchors">
         <button className="forgotPassword" type="button">Forgot password?</button>
-        <button className="signUpAnchor" type="button" onClick={props.onSignUp}>
+        <button className="signUpAnchor" type="button" onClick={onSubmit}>
           Sign up
         </button>
 

@@ -56,7 +56,7 @@ const AddDog = withStyles(styles)((props) => {
   };
 
   const onSubmit = () => {
-    fetch('http://localhost:3001/addDog/:id', {
+    fetch(`http://localhost:3001/addDog/${props.userId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -77,10 +77,10 @@ const AddDog = withStyles(styles)((props) => {
         },
       ),
     })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      });
+    .then(res => res.json())
+    .then((res) => {
+      console.log(res);
+    });
   };
 
   const onSwitchChange = (type) => {

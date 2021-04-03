@@ -14,15 +14,14 @@ const Carousel = (props) => {
     const [contentDiv, setContentDiv] = React.useState(<div></div>)
     const [status, setStatus] = React.useState(false)
     React.useEffect(() => {
-        
         if(!props.content[index]) {
             console.log(true)
             setContentDiv(<h3>No More Dogs</h3>)
             setDisabled(true)
         } else {
-        console.log('working')
         let content = props.content[index].photos[0] ? props.content[index].photos[0].full : '#'
         
+        console.log(props.content[index])
           setContentDiv(<CarouselSlide 
             age={props.content[index].age} 
             breeds={props.content[index].breeds.primary ? props.content[index].breeds.primary : 'NA' } 
@@ -32,17 +31,16 @@ const Carousel = (props) => {
             content={content} 
             />)
          }   
-
     }, [index])
 
     const numSlides = props.content.length;
-
     const onArrowClick = (direction) => {
         if(!disabled) {
         const increment = 1;
         const newIndex = (index + increment + numSlides) % numSlides;
         if(direction === 'left') {
-            props.addFav(props.content[index])
+            console.log('adding favorite')
+            props.addFav(props.content[index].id)
         }
         const oppDirection = direction === 'left' ? 'right' : 'left';
         setSlideDirection(direction);

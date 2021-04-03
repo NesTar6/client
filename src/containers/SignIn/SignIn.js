@@ -4,7 +4,7 @@ import './SignIn.css';
 import LoginForm from '../../Auth/LoginForm';
 import SignUp from '../../components/SignUp/SignUp';
 
-const SignIn = () => {
+const SignIn = (props) => {
 // setState
 // login button event to trigger link to /login  Login component
 // Sign up is event to trigger link to /signup SignUp component
@@ -37,11 +37,11 @@ const SignIn = () => {
   );
 
   if (signingUp) {
-    homeCard = <SignUp />;
+    homeCard = <SignUp addUserId={props.addUserId}/>;
   }
 
   if (logginIn) {
-    homeCard = <LoginForm onSignUp={onSignUp} />;
+    homeCard = <LoginForm addUserId={props.addUserId} onSignUp={onSignUp}/>;
   }
   return (
     <div>
