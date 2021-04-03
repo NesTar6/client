@@ -20,6 +20,7 @@ const SignUp = withStyles(styles)((props) => {
   const { classes } = props;
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [zipCode, setZipcode] = React.useState('');
   const [children, setChildren] = React.useState(false);
   const [cat, setCat] = React.useState(false);
   const [neutered, setNeutered] = React.useState(false);
@@ -34,6 +35,9 @@ const SignUp = withStyles(styles)((props) => {
     }
     if (type === 'password') {
       setPassword(e.target.value);
+    }
+    if (type === 'zipcode') {
+      setZipcode(e.target.value);
     }
   };
 
@@ -78,6 +82,9 @@ const SignUp = withStyles(styles)((props) => {
           special_needs: specialNeeds,
           shots_current: shots,
         },
+        location : {
+          zipcode: zipCode
+        }
       }),
 
     })
@@ -108,6 +115,16 @@ const SignUp = withStyles(styles)((props) => {
         InputProps={{ className: classes.input }}
         InputLabelProps={{ shrink: true }}
         onChange={(e) => handleFormChange(e, 'password')}
+      />
+      <TextField
+        className="signUpForm"
+        label="Zip Code"
+        variant="filled"
+        size="small"
+        height="50%"
+        InputProps={{ className: classes.input }}
+        InputLabelProps={{ shrink: true }}
+        onChange={(e) => handleFormChange(e, 'zipcode')}
       />
 
       {/* **********************SWITCHES************************************* */}

@@ -12,7 +12,11 @@ const Favorites = (props) => {
 
     const [dogData, setDogData] = React.useState([])
 
-    let loadingDiv = <Loader />
+    let loadingDiv = (
+    <div style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
+            <Loader />
+        </div>
+    )
     let userDogs = <div></div>
 
     React.useEffect(()=> {
@@ -42,8 +46,9 @@ const Favorites = (props) => {
     //console.log(selectDogData)
 
     if(!isFavLoading) {
-         loadingDiv = (
-             dogData.map((data)=> {
+        loadingDiv = (
+            <div className="dog-list">
+            { dogData.map((data)=> {
                  return (
                  <div 
                  key={data.id} 
@@ -56,29 +61,29 @@ const Favorites = (props) => {
                 >
                      <img src={data.photos[0].full}/>
                  </div>
-             )})
-         )
-        
+                 )})}
+            </div>
+        )
     }
 
     if(userDBDogs.length > 0) {
-        console.log(userDogs, 'AGAIN')
         userDogs = (
-            userDBDogs.map((data)=> {
-                console.log(data)
-                return (
-                <div 
-                key={data.id} 
-                onClick={()=>
-                   {
-                       setSelectDogData(data)
-                       setStatus(true)
-                    }}
-               className="container"
-               >
-                    <img src={data.photos ? data.photos : '#'} alt={data.name}/>
-                </div>
-            )})
+            <div className="dog-list">
+            { userDBDogs.map((data)=> {
+                 return (
+                 <div 
+                 key={data.id} 
+                 onClick={()=>
+                    {
+                        setSelectDogData(data)
+                        setStatus(true)
+                     }}
+                className="container"
+                >
+                     <img src={data.photos} alt={data.name}/>
+                 </div>
+                 )})}
+            </div>
         )
     }
 
@@ -89,13 +94,9 @@ const Favorites = (props) => {
         </Modal>
         )}
         <h4>Favorites</h4>
-        <div className="dog-list">
-            {loadingDiv} 
-        </div>
+            {loadingDiv}  
         <h4>Your Dogs</h4>
-        <div className="dog-list">
             {userDogs}
-        </div>
     </div>
 
   )
